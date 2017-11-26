@@ -1,0 +1,36 @@
+{
+  "name": "restservice",
+  "version": "1.0.0",
+  "description": "Rest API in Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/%3ADipanSM/Node.git"
+  },
+  "keywords": [
+    "Restful",
+    "APIs",
+    "DynamoDB"
+  ],
+  "author": "Dipan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/%3ADipanSM/Node/issues"
+  },
+  "homepage": "https://github.com/%3ADipanSM/Node#readme",
+  "dependencies": {
+    "aws-sdk": "^2.156.0",
+    "body-parser": "^1.18.2",
+    "dynamodb": "^1.0.0",
+    "dynamodb-model": "0.0.2",
+    "express": "^4.16.2",
+    "joi": "^13.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
