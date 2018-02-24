@@ -3,13 +3,15 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 3000;
 
-var auth = require('./auth.js');
+var auth = require('./auth');
 
 var bodyParser = require('body-parser');
 
 app.use (bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-//app.use(auth);
+
+//Middleware for request authentication
+app.use(auth);
 
 var routes = require('./api/routes/employeeRoutes');
 routes(app);

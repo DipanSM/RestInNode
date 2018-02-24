@@ -1,8 +1,5 @@
-'use strict'																																																																																																						
-var DynamoDB = require('dynamodb');
-DynamoDB.AWS.config.region = 'us-west-2';
-DynamoDB.AWS.config.endpoint = 'http://localhost:8000';
-
+'use strict'
+var DynamoDB = require('../../dbconnection');
 var Joi = require('joi');
 
 var employeeSchema = new DynamoDB.define('Employee', {

@@ -1,7 +1,7 @@
 'use strict'
 
 var Employee = require('../models/employeeModel');
-var responseBuilder = require('../../respnseBuilder.js');
+//var responseBuilder = require('../../respnseBuilder.js');
 
 module.exports = {
 
@@ -79,7 +79,7 @@ module.exports = {
 	*/
 	deleteEmployee: function(req, res) {
 		var id = parseInt(req.params.id);
-		
+
 		Employee
 			.destroy(id, function (err, data){
 				if(err){
@@ -89,5 +89,5 @@ module.exports = {
 				res.json(data);
 			});
 	},
-	
+
 }
