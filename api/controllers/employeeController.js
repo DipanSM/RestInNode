@@ -89,5 +89,10 @@ module.exports = {
 				res.json(data);
 			});
 	},
+<<<<<<< HEAD
 
 }
+=======
+	
+}
+>>>>>>> 1cdcff5f70e40b0b0391b0f663c62d65ae80f79e
