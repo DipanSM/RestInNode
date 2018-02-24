@@ -1,0 +1,18 @@
+1. Create Table
+aws dynamodb create-table --table-name Employee --attribute-definitions AttributeName=id,AttributeType=N A\
+--key-schema AttributeName=id,KeyType=HASH  --endpoint-url http://localhost:8000 --provisioned-throughput \ ReadCapacityUnits=1,WriteCapacityUnits=1
+
+2. Describe it
+aws dynamodb describe-table --table-name Employee --endpoint-url http://localhost:8000
+
+3.Insert a item
+aws dynamodb put-item --table-name Employee --item '{"id" : {"N" : "1"}, "name" : {"S" : "A"} , "contanct": {"N": "1234567890"}, "link" : {"S": "http://link2page.com"}}' --return-consumed-capacity TOTAL --endpoint-url http://localhost:8000
+
+aws dynamodb put-item --table-name Employee --item '{"id" : {"N" : "2"}, "name" : {"S" : "B"} , "contanct": {"N": "9876543210"}, "link" : {"S": "http://link2page_2.com"}}' --return-consumed-capacity TOTAL --endpoint-url http://localhost:8000
+
+4.Scan table
+aws dynamodb scan --table-name Employee --endpoint-url http://localhost:8000
+
+5. Delet table
+aws dynamodb delete-table --table-name Employee --endpoint-url http://localhost:8000
+
